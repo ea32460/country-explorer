@@ -1,4 +1,5 @@
 import {useEffect, useState } from "react";
+import CountryCard from "../components/CountryCard.jsx";
 
 
 export default function Countries(){
@@ -19,12 +20,18 @@ export default function Countries(){
         <div style={{ textAlign: "center"}}>
             <h1>Countries</h1>
 
+            <div
+                style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                }}
+>
             {countries.map((country)=>(
-                <div key={country.cca3} style={{margin: "10px"}}>
-                    <h3>{country.name.common}</h3>
-                        <img src={country.flags.png} width="80" />
-                </div>
+                <CountryCard key={country.cca3} country={country} />
+
             ))}
+        </div>
         </div>
     );
 }
