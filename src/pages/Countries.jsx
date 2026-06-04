@@ -6,6 +6,7 @@ export default function Countries(){
     const [countries, setCountries]= useState([]);
     const [loading, setLoading]= useState(true);
 
+
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all?fields=name,flags,cca3")
             .then((res)=>res.json())

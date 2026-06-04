@@ -1,4 +1,5 @@
 import {Routes, Route } from "react-router";
+import {useContext } from "react";
 
 import Home from "./pages/Home";
 import Countries from "./pages/Countries";
@@ -6,9 +7,12 @@ import Favorites from "./pages/Favorites";
 import CountryDetails from "./pages/CountryDetails";
 import Navbar from "./components/Navbar.jsx";
 import {useEffect, useState} from "react";
+import {ThemeContext} from "../context/ThemeContext";
 
 
 export default function App(){
+  const { darkMode }= useContext(ThemeContext);
+
   const [favorites, setFavorites]= useState(()=>{
     const saved = localStorage.getItem("favorites");
     return saved ? JSON.parse(saved) : [];
