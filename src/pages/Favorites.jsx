@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
+
 export default function Favorites({ favorites }) {
     const { darkMode } = useContext(ThemeContext);
+
 
     return (
         <div
@@ -15,6 +17,7 @@ export default function Favorites({ favorites }) {
             }}
         >
             <h1>⭐ Favorites</h1>
+
 
             {favorites.length === 0 ? (
                 <p style={{ color: darkMode ? "#ccc" : "#555" }}>
@@ -43,12 +46,7 @@ export default function Favorites({ favorites }) {
                                 transition: "0.3s",
                             }}
                         >
-                            <img
-                                src={c.flags.png}
-                                alt={c.name.common}
-                                width="100"
-                            />
-
+                            <img src={c.flags.png} width="100" />
                             <h4>{c.name.common}</h4>
                         </div>
                     ))}

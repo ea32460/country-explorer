@@ -1,9 +1,11 @@
 import { Link } from "react-router";
-import { useContext } from "react-router";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+
 
 export default function Home() {
     const { darkMode } = useContext(ThemeContext);
+
 
     const cardStyle = {
         background: darkMode ? "#1e1e1e" : "white",
@@ -14,6 +16,8 @@ export default function Home() {
         boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
         transition: "0.3s",
     };
+
+
     return (
         <div
             style={{
@@ -22,14 +26,17 @@ export default function Home() {
                 padding: "60px 20px",
                 textAlign: "center",
                 color: darkMode ? "white" : "black",
+
+
                 backgroundImage:
                     "url(https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1)",
+
+
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
             }}
         >
-            {/* Overlay */}
             <div
                 style={{
                     position: "absolute",
@@ -44,15 +51,17 @@ export default function Home() {
                 }}
             />
 
-            {/* Content */}
+
             <div style={{ position: "relative", zIndex: 2 }}>
                 <h1 style={{ fontSize: "3rem", marginBottom: "10px" }}>
                     🌍 Country Explorer
                 </h1>
 
+
                 <h2 style={{ color: darkMode ? "#ddd" : "#555" }}>
                     Discover the World One Country at a Time
                 </h2>
+
 
                 <p
                     style={{
@@ -63,10 +72,12 @@ export default function Home() {
                     }}
                 >
                     Have you ever wondered how many countries there are in the world,
-                    where they are located, what languages they speak, or how large
-                    their population is? Country Explorer helps you learn about
-                    countries in an interactive and enjoyable way.
+                    where they are located, what languages they speak, or how large their
+                    population is? Country Explorer helps you learn about countries in an
+                    interactive and enjoyable way.
                 </p>
+
+
                 <div
                     style={{
                         display: "flex",
@@ -81,16 +92,20 @@ export default function Home() {
                         <p>Browse countries from all around the world.</p>
                     </div>
 
+
                     <div style={cardStyle}>
                         <h3>🔍 Search</h3>
                         <p>Find countries instantly by name.</p>
                     </div>
+
 
                     <div style={cardStyle}>
                         <h3>⭐ Save</h3>
                         <p>Keep your favorite countries in one place.</p>
                     </div>
                 </div>
+
+
                 <Link
                     to="/countries"
                     style={{
@@ -105,9 +120,10 @@ export default function Home() {
                         fontWeight: "bold",
                     }}
                 >
-                    Start Exploring 🌍
+                    Start Exploring
                 </Link>
             </div>
         </div>
     );
 }
+

@@ -1,12 +1,14 @@
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import{ BrowserRouter} from "react-router";
-import {ThemeProvider} from "./context/ThemeContext.jsx";
+import { BrowserRouter } from "react-router";
+import { ThemeProvider } from "./context/ThemeContext";
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <ThemeProvider>
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </ThemeProvider>
 );
