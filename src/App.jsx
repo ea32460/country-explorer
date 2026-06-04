@@ -7,7 +7,7 @@ import Favorites from "./pages/Favorites";
 import CountryDetails from "./pages/CountryDetails";
 import Navbar from "./components/Navbar.jsx";
 import {useEffect, useState} from "react";
-import {ThemeContext} from "../context/ThemeContext";
+import {ThemeContext} from "./context/ThemeContext";
 
 
 export default function App(){
